@@ -11,7 +11,6 @@ function computerPlay() {
         case 3:
             return "Scissors"
             break
-
         default:
             return "ERROR"
     }
@@ -35,12 +34,13 @@ function playerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection === "Rock" && computerSelection === "Scissors" || playerSelection === "Paper" && computerSelection === "Rock"|| playerSelection === "Scissors" && computerSelection === "Paper") {
-        return [`Player chooses ${playerSelection}, Computer chooses ${computerSelection}, Player wins!!!`, 0]; 
+    if (playerSelection === "Rock" && computerSelection === "Scissors" || playerSelection === "Paper" && computerSelection === "Rock"||
+            playerSelection === "Scissors" && computerSelection === "Paper") {
+        return [`Player chooses ${playerSelection}, Computer chooses ${computerSelection}, Player wins!`, 0]; 
     }else if (computerSelection === playerSelection) {
-        return [`Player chooses ${playerSelection}, Computer chooses ${computerSelection}, It's a tie!!!`, 1];
+        return [`Player chooses ${playerSelection}, Computer chooses ${computerSelection}, It's a tie!`, 1];
     }else{
-        return [`Player chooses ${playerSelection}, Computer chooses ${computerSelection}, Computer wins!!!`, 2];
+        return [`Player chooses ${playerSelection}, Computer chooses ${computerSelection}, Computer wins!`, 2];
     }
 }
 
@@ -73,6 +73,5 @@ function game() {
         console.log("Player wins the game!")
     } else {
         console.log("Computer wins the game!")
-    }
-    
+    }  
 }
