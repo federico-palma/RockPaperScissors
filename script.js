@@ -1,6 +1,5 @@
 function computerPlay() {
     let rndmNum = Math.floor(Math.random() * 3) + 1;
-
     switch (rndmNum) {
         case 1:
             return "Rock"

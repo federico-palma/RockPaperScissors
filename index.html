@@ -6,11 +6,29 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    
-        <input name="btn" id="clickMe" type="button" value="Start Game" onclick="game();" />
+        <h1 id="Title">Rock - Paper - Scissors</h1>
+
+        <button id="startGame-btn" onclick="game()">Start Game</button>
+
+        <div id="infoScreen">
+            <h3 id="infoScreenText"></h3>
+        </div>
+
+        <div id="scoreSheet">
+            <p>Player points: 0</p>
+            <p>Computer points: 0</p>
+        </div>
+   
+        <div id="rps-btns">
+            <button class="game-btns" id="r-btn">Rock</button>
+            <button class="game-btns" id="p-btn">Paper</button>
+            <button class="game-btns" id="s-btn">Scissors</button>
+        </div>
+
+
         
         <script src="script.js" async defer></script>
     </body>
