@@ -5,7 +5,7 @@ const winnerText = document.getElementById('winnerText');
 let userChoice;
 let playerScore;
 let computerScore;
-let goal = 5;
+let goal
 let resultText;
 
 let gameBtns = document.getElementsByClassName('game-btns');
@@ -25,8 +25,8 @@ function playGame(e) {
         resultText = "1 point for Player!";
         playerScore++;
     } else if (roundResult === 1) {
-        console.log("No points for anybody.");
-        resultText = "No points for anybody.";
+        console.log("It's a tie.");
+        resultText = "It's a tie.";
     } else {
         computerScore++
         console.log("1 point for Computer!");
@@ -82,13 +82,26 @@ function resetGame() {
     playerPoints.innerHTML = playerScore;
     computerPoints.innerHTML = computerScore;
     infoScreenText.innerHTML = `GET READY TO PLAY ROCK - PAPER - SCISSORS!!!`;
+    goal = setGoal();
     winnerText.innerHTML = ` First to ${goal} points wins!`
     for (let i = 0; i < gameBtns.length; i++) {
         gameBtns[i].disabled = false;
     }
 }
 
-// Legacy function for console play
+function setGoal() {
+    while (true) {
+        let goal = prompt('What is the goal of this game?')
+        parseInt(goal)
+        if (isNaN(goal) || goal == null || goal < 1 || goal % 1 !== 0) {
+            alert("Please choose a number that is positive, whole and bigger than 0! ")
+        }else{
+            return goal
+        }
+    }
+}
+
+// Legacy functions for console play
 
 // function game() {
 //     let playerScore = 0;

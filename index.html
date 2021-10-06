@@ -9,28 +9,27 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 id="Title">Rock - Paper - Scissors</h1>
+        <main>
+            <h1 id="title">Rock - Paper - Scissors</h1>
 
-        <button id="startGame-btn" onclick="resetGame()">Start Game</button>
+            <button id="startGame-btn" onclick="resetGame()">Start Game</button>
 
-        <div id="infoScreen">
-            <h3 id="infoScreenText"></h3>
-            <h3 id="winnerText"></h3>
-        </div>
+            <div id="infoScreen">
+                <h3 id="infoScreenText"></h3>
+                <h3 id="winnerText"></h3>
+            </div>
 
-        <div id="scoreSheet">
-            <p>Player points: <span id="playerPoints"></span></p>
-            <p>Computer points: <span id="computerPoints"></span></p>
-        </div>
-   
-        <div id="rps-btns">
-            <button class="game-btns" id="Rock">Rock</button>
-            <button class="game-btns" id="Paper">Paper</button>
-            <button class="game-btns" id="Scissors">Scissors</button>
-        </div>
-
-
-        
+            <div id="scoreSheet">
+                <p class="scoreClass">Player points: <span id="playerPoints"></span></p>
+                <p class="scoreClass"> Computer points: <span id="computerPoints"></span></p>
+            </div>
+    
+            <div id="rps-btns">
+                <button class="game-btns" id="Rock">Rock</button>
+                <button class="game-btns" id="Paper">Paper</button>
+                <button class="game-btns" id="Scissors">Scissors</button>
+            </div>
+        </main>
         <script src="script.js" async defer></script>
     </body>
 </html>
