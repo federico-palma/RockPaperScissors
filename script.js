@@ -8,12 +8,14 @@ let computerScore;
 let goal
 let resultText;
 
+// Set event listener on RPS buttons
 let gameBtns = document.getElementsByClassName('game-btns');
 for (let i = 0; i < gameBtns.length; i++) {
     gameBtns[i].addEventListener('click', playGame)
     gameBtns[i].disabled = true;
 }
 
+// Game loop
 function playGame(e) {
     userChoice = e.target.id;
     computerChoice = computerPlay();
@@ -47,6 +49,7 @@ function playGame(e) {
     }
 }
 
+// CPU game logic
 function computerPlay() {
     let rndmNum = Math.floor(Math.random() * 3) + 1;
     switch (rndmNum) {
@@ -76,6 +79,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// Functions for reseting the game and set the goal
 function resetGame() {
     playerScore = 0;
     computerScore = 0;
